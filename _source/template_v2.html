@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026 年度 OKR 與 AI 導入成果</title>
+<style>
+:root{
+  --bg:#eef2f8;--ink:#0f1b2d;--ink-2:#3b4a60;--ink-3:#6a7a90;
+  --navy:#0b2a5b;--blue:#2f6fe0;--blue-soft:#e6efff;
+  --green:#14915a;--green-soft:#e3f5ec;--amber:#b86a00;--amber-soft:#fff3df;
+  --line:rgba(15,27,45,.09);--glass:rgba(255,255,255,.62);--glass-strong:rgba(255,255,255,.8);--glass-edge:rgba(255,255,255,.85);
+  --shadow:0 1px 1px rgba(15,27,45,.04),0 8px 28px rgba(31,64,122,.08);--radius:22px;
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro TC","PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;font-family:var(--font);color:var(--ink);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;
+  background:radial-gradient(1100px 520px at 8% -8%,#dfe9ff 0%,rgba(223,233,255,0) 60%),radial-gradient(900px 480px at 100% 4%,#e4f3f1 0%,rgba(228,243,241,0) 60%),var(--bg);background-attachment:fixed}
+img{max-width:100%;display:block}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.glass{background:var(--glass);-webkit-backdrop-filter:blur(22px) saturate(170%);backdrop-filter:blur(22px) saturate(170%);border:1px solid var(--glass-edge);border-radius:var(--radius);box-shadow:var(--shadow),inset 0 1px 0 rgba(255,255,255,.9)}
+.nav{position:sticky;top:0;z-index:20;padding:10px 0}
+.nav .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 10px 8px 20px;border-radius:999px}
+.nav .brand{font-weight:700;color:var(--navy);font-size:14px;white-space:nowrap}
+.nav .links{display:flex;gap:4px;flex-wrap:wrap}
+.nav a{color:var(--ink-2);text-decoration:none;font-size:14px;padding:6px 14px;border-radius:999px;white-space:nowrap}
+.nav a:hover{background:rgba(47,111,224,.1);color:var(--navy)}
+.pill{display:inline-block;font-size:12.5px;font-weight:700;padding:3px 10px;border-radius:999px;vertical-align:middle;white-space:nowrap}
+.pill.ok{background:var(--green-soft);color:var(--green)}
+.pill.info{background:var(--blue-soft);color:var(--blue)}
+.pill.warn{background:var(--amber-soft);color:var(--amber)}
+
+/* hero */
+.hero{padding:26px 0 0}
+.eyebrow{font-size:13px;color:var(--ink-3)}
+h1{font-size:42px;line-height:1.2;margin:8px 0 6px;color:var(--navy);letter-spacing:-.01em}
+.lead{font-size:19px;color:var(--ink-2);margin:0 0 22px;max-width:900px}
+.lead b{color:var(--navy)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.kpi{padding:20px 22px 18px;display:flex;flex-direction:column}
+.kpi .cap{font-size:13px;font-weight:700;color:var(--ink-3);letter-spacing:.02em}
+.kpi .num{font-size:54px;line-height:1.05;font-weight:800;color:var(--navy);letter-spacing:-.02em;font-variant-numeric:tabular-nums;margin-top:8px}
+.kpi .num small{font-size:20px;font-weight:700;margin-left:3px;color:var(--ink-2)}
+.kpi .from{font-size:14px;color:var(--ink-3);margin-top:6px;font-variant-numeric:tabular-nums}
+.kpi .from s{color:#9aa8bb}
+.kpi .foot{margin-top:auto;padding-top:12px}
+.kpi.hl{background:linear-gradient(160deg,rgba(47,111,224,.95),rgba(11,42,91,.95));border-color:rgba(255,255,255,.4)}
+.kpi.hl .cap,.kpi.hl .from{color:#cfe0ff}
+.kpi.hl .num,.kpi.hl .num small{color:#fff}
+.kpi.hl .pill.ok{background:rgba(255,255,255,.18);color:#fff}
+
+/* sections */
+section.block{padding:52px 0 0}
+.sec-tag{font-size:13px;font-weight:800;color:var(--blue);letter-spacing:.08em}
+h2{font-size:30px;line-height:1.3;color:var(--navy);margin:6px 0 20px}
+h3{font-size:19px;color:var(--navy);margin:0}
+
+/* AI table */
+.ai-grid{display:grid;gap:16px}
+.ai-row{display:grid;grid-template-columns:1.1fr 1.2fr 1fr 1.1fr;gap:0;padding:0;overflow:hidden}
+.ai-row>div{padding:20px 22px;border-left:1px solid var(--line)}
+.ai-row>div:first-child{border-left:0}
+.ai-head{display:grid;grid-template-columns:1.1fr 1.2fr 1fr 1.1fr;padding:0 0 6px}
+.ai-head div{font-size:12.5px;font-weight:800;color:var(--ink-3);letter-spacing:.06em;padding:0 22px}
+.ai-row .what b{display:block;font-size:18px;color:var(--navy);line-height:1.35}
+.ai-row .what span:not(.idx){display:block;font-size:13.5px;color:var(--ink-3);margin-top:6px}
+.ai-row .idx{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:8px;background:var(--navy);color:#fff;font-size:13px;font-weight:800;margin-bottom:10px}
+.ai-row p{margin:0;font-size:14.5px;color:var(--ink-2)}
+.ai-row .gain .v{font-size:34px;font-weight:800;line-height:1.05;color:var(--blue);font-variant-numeric:tabular-nums}
+.ai-row .gain .v small{font-size:16px;margin-left:2px}
+.ai-row .gain .k{font-size:13px;color:var(--ink-3);margin-top:6px}
+.ai-row .who ul{margin:0;padding:0;list-style:none}
+.ai-row .who li{font-size:14px;color:var(--ink-2);margin:0 0 6px;padding-left:54px;position:relative}
+.ai-row .who li em{position:absolute;left:0;top:1px;font-style:normal;font-size:11px;font-weight:800;color:var(--blue);background:var(--blue-soft);border-radius:6px;padding:1px 6px}
+
+/* time compare */
+.compare{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:16px}
+.cmp{padding:20px 22px}
+.cmp .t{font-size:14px;font-weight:700;color:var(--navy)}
+.cmp .row{display:grid;grid-template-columns:52px 1fr;align-items:center;gap:10px;margin-top:12px;font-size:13px;color:var(--ink-3)}
+.cmp .track{height:26px;border-radius:8px;background:rgba(15,27,45,.05);position:relative;overflow:hidden}
+.cmp .fill{position:absolute;inset:0 auto 0 0;border-radius:8px;display:flex;align-items:center;padding-left:10px;font-size:13px;font-weight:700;white-space:nowrap}
+.cmp .fill.old{background:#d5dde9;color:#44546a}
+.cmp .fill.new{background:var(--blue);color:#fff}
+.cmp .res{margin-top:14px;font-size:15px;color:var(--ink-2)}
+.cmp .res b{font-size:24px;color:var(--navy);margin-right:4px}
+.note{font-size:13px;color:var(--ink-3);margin:12px 4px 0}
+
+/* OKR */
+.okr{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.kr{padding:22px 24px;display:flex;flex-direction:column;gap:10px}
+.kr .top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.kr .krid{font-size:12.5px;font-weight:800;color:var(--ink-3);letter-spacing:.06em}
+.kr h3{font-size:18px;line-height:1.4}
+.kr .big{font-size:46px;font-weight:800;line-height:1;color:var(--navy);font-variant-numeric:tabular-nums}
+.kr .big small{font-size:18px;color:var(--ink-2);margin-left:3px}
+.kr .sub{font-size:13.5px;color:var(--ink-3)}
+.meter{height:10px;border-radius:99px;background:rgba(15,27,45,.07);position:relative;overflow:hidden}
+.meter i{position:absolute;inset:0 auto 0 0;border-radius:99px;background:linear-gradient(90deg,#3fb67f,var(--green))}
+.kr ul{margin:4px 0 0;padding:0;list-style:none}
+.kr li{position:relative;padding-left:18px;margin:6px 0;font-size:14px;color:var(--ink-2)}
+.kr li::before{content:"";position:absolute;left:3px;top:.68em;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+.kr li b{color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font-size:12.5px;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--glass-strong);border:1px solid var(--line);color:var(--navy)}
+.done-list{padding:22px 26px;margin-top:16px}
+.done-list h3{margin-bottom:12px}
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.tl .m{border-top:3px solid var(--blue);padding-top:10px}
+.tl .m b{display:block;color:var(--navy);font-size:15px}
+.tl .m span{font-size:13.5px;color:var(--ink-2);display:block;margin-top:4px;line-height:1.55}
+.tl .m .when{font-size:12px;font-weight:800;color:var(--blue);letter-spacing:.04em}
+
+/* evidence */
+.ev{display:grid;grid-template-columns:1fr 1.5fr;gap:16px}
+.evc{padding:22px 24px}
+.evc h3{margin-bottom:4px}
+.evc .muted{font-size:13.5px;color:var(--ink-3);margin:0 0 14px}
+.pair{display:grid;gap:14px}
+.pair.two{grid-template-columns:1fr 1fr}
+.pair.three{grid-template-columns:repeat(3,1fr)}
+figure{margin:0;break-inside:avoid;page-break-inside:avoid}
+.phone{border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 0 0 1px rgba(15,27,45,.08),0 8px 24px rgba(31,64,122,.12);aspect-ratio:422/914}
+.phone.tall{aspect-ratio:390/844}
+.phone img{width:100%;height:100%;object-fit:cover;object-position:top}
+figcaption{font-size:13px;color:var(--ink-2);margin-top:8px;line-height:1.5}
+figcaption b{color:var(--navy)}
+.tag{display:inline-block;font-size:11.5px;font-weight:800;padding:2px 8px;border-radius:999px;margin-bottom:6px}
+.tag.old{background:#eceff4;color:#55657a}.tag.new{background:var(--blue-soft);color:var(--blue)}
+.confirm{margin-top:14px;padding:12px 16px;border-radius:14px;background:var(--green-soft);color:#0d5a39;font-size:14px}
+footer{padding:40px 0 40px;font-size:12.5px;color:var(--ink-3);text-align:center}
+
+@media (max-width:1080px){
+  .kpis{grid-template-columns:1fr 1fr}
+  .ai-head{display:none}
+  .ai-row{grid-template-columns:1fr 1fr}
+  .ai-row>div{border-left:0;border-top:1px solid var(--line)}
+  .ai-row>div:nth-child(-n+2){border-top:0}
+  .ai-row>div:nth-child(even){border-left:1px solid var(--line)}
+  .okr{grid-template-columns:1fr}
+  .ev{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .wrap{padding:0 16px}
+  h1{font-size:30px}.lead{font-size:16.5px}h2{font-size:24px}
+  .kpi .num{font-size:44px}
+  .ai-row{grid-template-columns:1fr}
+  .ai-row>div{border-left:0 !important;border-top:1px solid var(--line) !important;padding:16px 18px}
+  .ai-row>div:first-child{border-top:0 !important}
+  .ai-row .what span:not(.idx){display:none}
+  .compare,.tl{grid-template-columns:1fr}
+  .nav .brand{display:none}.nav .bar{padding:6px;justify-content:center}
+  .nav a{padding:6px 10px;font-size:13px}
+  .pair.three{grid-template-columns:1fr;max-width:300px;margin:0 auto}
+}
+@media (max-width:420px){.kpis{grid-template-columns:1fr}}
+@media print{
+  body{background:#fff}.nav{display:none}
+  .glass{background:#fff;box-shadow:none;border:1px solid #dde3ec;-webkit-backdrop-filter:none;backdrop-filter:none}
+  .kpi.hl{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .kpi,.ai-row,.cmp,.kr,.evc,.done-list{break-inside:avoid;page-break-inside:avoid}
+  h2{break-after:avoid}
+}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="wrap"><div class="bar glass">
+  <span class="brand">2026 OKR 與 AI 導入成果</span>
+  <div class="links"><a href="#ai">All in AI</a><a href="#okr">BU OKR</a><a href="#evidence">實際畫面</a></div>
+</div></div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">Networking BU｜2026 年度個人績效報告｜12/01 繳交・12/07 年度成果討論</div>
+  <h1>2026 年度 OKR 與 AI 導入成果</h1>
+  <p class="lead">今年我把設計流程 <b>All in AI</b>：Router App V2 易用性 <b>達成 BU 目標</b>，Claude 動態原型導入 <b>7 個專案</b>，流程首稿從 2–3 天縮短到半天，PM、RD 確認週期從 2–3 週縮短到 2–3 天。</p>
+  <div class="kpis">
+    <div class="kpi glass hl">
+      <div class="cap">BU OKR｜Router App SUS</div>
+      <div class="num">80.42<small>分</small></div>
+      <div class="from">目標 80 分以上</div>
+      <div class="foot"><span class="pill ok">✓ 達成率 100.5%</span></div>
+    </div>
+    <div class="kpi glass">
+      <div class="cap">流程首稿產能</div>
+      <div class="num">4–6<small>倍</small></div>
+      <div class="from"><s>2–3 天</s> → 約半天</div>
+      <div class="foot"><span class="pill info">單案動態首稿</span></div>
+    </div>
+    <div class="kpi glass">
+      <div class="cap">PM、RD 確認週期</div>
+      <div class="num">−80<small>%</small></div>
+      <div class="from"><s>2–3 週</s> → 2–3 天</div>
+      <div class="foot"><span class="pill info">需求討論到確認</span></div>
+    </div>
+    <div class="kpi glass">
+      <div class="cap">AI 動態原型導入</div>
+      <div class="num">7<small>個專案</small></div>
+      <div class="from">Router App、AiMesh、QIS 等</div>
+      <div class="foot"><span class="pill info">跨專案落地</span></div>
+    </div>
+  </div>
+</div></header>
+
+<main class="wrap">
+
+<!-- ===== 1. All in AI ===== -->
+<section class="block" id="ai">
+  <div class="sec-tag">重點一｜ALL IN AI</div>
+  <h2>我用 AI 做了什麼、解了 BU 哪些老問題</h2>
+  <div class="ai-head"><div>AI 做了什麼</div><div>解了 BU 過去無解的問題</div><div>產能變化</div><div>幫大家提升了什麼</div></div>
+  <div class="ai-grid">
+    <div class="ai-row glass">
+      <div class="what"><span class="idx">1</span><b>Claude 動態原型取代逐頁 UE Flow</b><span>需求直接變成可點擊的網頁原型</span></div>
+      <div><p>靜態 Figma 流程看不出<b>轉場、等待、異常分支與返回方式</b>，團隊各自理解不同，只能反覆補圖、開會確認。</p></div>
+      <div class="gain"><div class="v">4–6<small>倍</small></div><div class="k">首稿 2–3 天 → 約半天<br>確認週期 2–3 週 → 2–3 天</div></div>
+      <div class="who"><ul><li><em>PM</em>評審當下就能試走，提早發現缺漏情境</li><li><em>RD</em>開發前對齊轉場與異常去向，降低返工</li><li><em>設計</em>省下畫稿時間，專注分支與例外</li></ul></div>
+    </div>
+    <div class="ai-row glass">
+      <div class="what"><span class="idx">2</span><b>AI 把 PM、RD 想法轉成可比較的設計</b><span>快速產出版面初稿與設計變體</span></div>
+      <div><p>首頁要同時照顧初階與專業使用者，各方意見難以收斂；過去只能靠平面稿在會議上討論。</p></div>
+      <div class="gain"><div class="v">19<small>份</small></div><div class="k">視覺提案（10 Web＋9 App）<br>作為設計探索素材</div></div>
+      <div class="who"><ul><li><em>PM</em>看得到具體方案，討論更快收斂</li><li><em>設計</em>少畫圖，把時間投入使用者研究</li></ul></div>
+    </div>
+    <div class="ai-row glass">
+      <div class="what"><span class="idx">3</span><b>可操作原型直接給使用者測</b><span>用真實行為決定功能入口</span></div>
+      <div><p>平面稿無法驗證使用者<b>會先點哪裡、找不找得到設定、遇到異常怎麼做</b>，改版方向缺少依據。</p></div>
+      <div class="gain"><div class="v">80.42<small>分</small></div><div class="k">V2 SUS，同批 24 人<br>較既有 App 提升 8.02 分</div></div>
+      <div class="who"><ul><li><em>使用者</em>一眼看懂網路狀態，異常能立即處理</li><li><em>BU</em>改版有數據支持，達成 OKR</li></ul></div>
+    </div>
+  </div>
+
+  <div class="compare">
+    <div class="cmp glass">
+      <div class="t">單案流程首稿</div>
+      <div class="row"><span>過去</span><div class="track"><div class="fill old" style="width:100%">2–3 天</div></div></div>
+      <div class="row"><span>現在</span><div class="track"><div class="fill new" style="width:20%">半天</div></div></div>
+      <div class="res"><b>4–6 倍</b>產能</div>
+    </div>
+    <div class="cmp glass">
+      <div class="t">需求討論到 PM、RD 確認</div>
+      <div class="row"><span>過去</span><div class="track"><div class="fill old" style="width:100%">2–3 週</div></div></div>
+      <div class="row"><span>現在</span><div class="track"><div class="fill new" style="width:20%">2–3 天</div></div></div>
+      <div class="res"><b>約 80%</b>時間縮短</div>
+    </div>
+    <div class="cmp glass">
+      <div class="t">7 個專案合計（估算）</div>
+      <div class="row"><span>首稿</span><div class="track" style="background:none"><div class="fill new" style="position:static;display:inline-flex;height:26px;padding:0 12px">省約 10–17 個工作天</div></div></div>
+      <div class="row"><span>確認</span><div class="track" style="background:none"><div class="fill new" style="position:static;display:inline-flex;height:26px;padding:0 12px">省約 56–84 個工作天</div></div></div>
+      <div class="res"><b>約 2.5–4 個月</b>確認時間</div>
+    </div>
+  </div>
+  <p class="note">估算方式：每個專案以一條主要流程計，2–3 週以 10–15 個工作天計；首稿每案省 1.5–2.5 天，確認週期每案省 8–12 天，乘以 7 個專案。半天首稿含提示詞撰寫、人工修改與試走。</p>
+</section>
+
+<!-- ===== 2. OKR ===== -->
+<section class="block" id="okr">
+  <div class="sec-tag">重點二｜BU OKR</div>
+  <h2>針對 BU OKR，我今年做了這些事</h2>
+  <div class="okr">
+    <div class="kr glass">
+      <div class="top"><span class="krid">KR｜易用性</span><span class="pill ok">✓ 已達成</span></div>
+      <h3>Router App V2 SUS 達 80 分以上</h3>
+      <div class="big">80.42<small>/ 80</small></div>
+      <div class="meter"><i style="width:100%"></i></div>
+      <div class="sub">達成率 100.5%｜24 位受測者</div>
+      <ul>
+        <li>同批受測者：既有 App 72.40 → V2 <b>80.42（+8.02）</b></li>
+        <li>ASUS 既有用戶 10 人：65.75 → <b>81.25（+15.50）</b></li>
+        <li>歷程：1 月既有 App 65.8 → V1 72 → V2 80.42</li>
+      </ul>
+    </div>
+    <div class="kr glass">
+      <div class="top"><span class="krid">KR｜功能分層</span><span class="pill warn">設計目標</span></div>
+      <h3>App 功能重新分層，聚焦日常管理</h3>
+      <div class="big">91 → 50<small>項</small></div>
+      <div class="sub">App 收斂約 45%，專業功能移到進階設定與 Web GUI，不刪除</div>
+      <ul>
+        <li><b>第一層 App</b>：網路狀態、Wi-Fi、裝置管理、家庭守護、AI 診斷</li>
+        <li><b>第二層 進階設定</b>：WAN／LAN、VPN、QoS、DDNS 等</li>
+        <li><b>第三層 Web GUI</b>：Routing、VLAN、System Log、韌體管理</li>
+      </ul>
+    </div>
+    <div class="kr glass">
+      <div class="top"><span class="krid">KR｜AI 導入</span><span class="pill ok">✓ 7 個專案</span></div>
+      <h3>Claude 動態原型導入跨專案流程</h3>
+      <div class="big">7<small>個專案</small></div>
+      <div class="sub">用於需求評審與開發對齊</div>
+      <div class="chips"><span>Floor Plan Web</span><span>AiMesh Diagnostic</span><span>QIS</span><span>Network Diagnostic</span><span>Floor Plan</span><span>Site Manager</span><span>Router App</span></div>
+    </div>
+  </div>
+
+  <div class="done-list glass">
+    <h3>今年的工作軌跡</h3>
+    <div class="tl">
+      <div class="m"><div class="when">1 月</div><b>初階使用者研究</b><span>10 位使用者 1 對 1 訪談＋Demo UI 測試，SUS 65.8 → V1 72，找出三項核心洞察</span></div>
+      <div class="m"><div class="when">8 月</div><b>季會提出 V2 方向</b><span>功能三層分層、91 → 50 項目標、V2 驗證目標 80+</span></div>
+      <div class="m"><div class="when">10 月</div><b>V2 驗證達標</b><span>24 位受測者操作 V2 原型，SUS 80.42 達成目標</span></div>
+      <div class="m"><div class="when">全年</div><b>AI 設計與動態原型</b><span>PM、RD 想法轉成 19 份視覺提案；Claude 動態原型導入 7 個專案</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Evidence ===== -->
+<section class="block" id="evidence">
+  <div class="sec-tag">實際畫面</div>
+  <h2>成果都在可操作的原型裡</h2>
+  <div class="ev">
+    <div class="evc glass">
+      <h3>Router App 首頁改版</h3>
+      <p class="muted">狀態、裝置、常用功能放到第一層</p>
+      <div class="pair two">
+        <figure><span class="tag old">既有版本</span><div class="phone"><img src="{{old-home}}" alt="既有 Router App 首頁"></div><figcaption>以路由器圖片為主，狀態藏在小卡（英文介面）</figcaption></figure>
+        <figure><span class="tag new">V2</span><div class="phone"><img src="{{v2-home}}" alt="Router App V2 首頁"></div><figcaption><b>網路一切正常</b>、連線裝置數一眼看到</figcaption></figure>
+      </div>
+    </div>
+    <div class="evc glass">
+      <h3>Claude 動態流程｜AiMesh Diagnostic</h3>
+      <p class="muted">節點不支援時的替代路徑，PM、RD 在評審當下直接試走</p>
+      <div class="pair three">
+        <figure><span class="tag new">1 操作</span><div class="phone tall"><img src="{{aimesh-home}}" alt="AiMesh Diagnostic 首頁"></div><figcaption>按 <b>Start</b> 開始快速測試</figcaption></figure>
+        <figure><span class="tag new">2 系統回饋</span><div class="phone tall"><img src="{{aimesh-home-quick-unavailable}}" alt="無法使用快速測試"></div><figcaption>節點不支援或離線，提示<b>無法使用快速測試</b></figcaption></figure>
+        <figure><span class="tag new">3 下一步</span><div class="phone tall"><img src="{{aimesh-advanced}}" alt="Advanced Test"></div><figcaption>改用 <b>Advanced Test</b> 自選兩台裝置</figcaption></figure>
+      </div>
+      <div class="confirm">開發前就確認：不支援時不進測試頁、改導向 Advanced Test；提示不列出個別裝置。</div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>2026 年度 OKR 與 AI 導入成果｜Networking BU｜版本 2026/11/24 v2</footer>
+</body>
+</html>
