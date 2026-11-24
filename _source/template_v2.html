@@ -116,6 +116,31 @@ h3{font-size:19px;color:var(--navy);margin:0}
 .tl .m span{font-size:13.5px;color:var(--ink-2);display:block;margin-top:4px;line-height:1.55}
 .tl .m .when{font-size:12px;font-weight:800;color:var(--blue);letter-spacing:.04em}
 
+
+/* section banner */
+.banner{display:block;padding:22px 30px;border-radius:var(--radius);margin:0 0 20px;color:#fff;box-shadow:0 10px 30px rgba(31,64,122,.18),inset 0 1px 0 rgba(255,255,255,.35);border:1px solid rgba(255,255,255,.35)}
+.banner.b1{background:linear-gradient(120deg,#2f6fe0,#0b2a5b)}
+.banner.b2{background:linear-gradient(120deg,#0ea5b8,#0a6860)}
+.banner .sec-tag{color:rgba(255,255,255,.85);font-size:14px}
+.banner h2{color:#fff;font-size:38px;margin:6px 0 0;line-height:1.25}
+/* projects */
+.proj-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin:22px 4px 12px}
+.proj-head h3{font-size:20px}
+.proj-head span{font-size:13.5px;color:var(--ink-3)}
+.projs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pj{display:block;text-decoration:none;color:inherit;padding:10px;transition:transform .15s,box-shadow .15s}
+.pj:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(31,64,122,.18)}
+.pj .shot{border-radius:14px;overflow:hidden;aspect-ratio:16/10;background:#e9eef5;box-shadow:0 0 0 1px rgba(15,27,45,.08)}
+.pj .shot img{width:100%;height:100%;object-fit:cover;object-position:top}
+.pj .meta{padding:10px 6px 4px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.pj b{display:block;color:var(--navy);font-size:15.5px;line-height:1.3}
+.pj small{display:block;color:var(--ink-3);font-size:12.5px}
+.pj .go{flex:none;font-size:12.5px;font-weight:700;color:#fff;background:var(--blue);border-radius:999px;padding:4px 10px}
+.pj.count{display:flex;flex-direction:column;justify-content:center;padding:22px;background:linear-gradient(160deg,#0ea5b8,#0b2a5b);color:#fff;border-color:rgba(255,255,255,.35)}
+.pj.count .v{font-size:56px;font-weight:800;line-height:1}
+.pj.count span{font-size:14.5px;color:rgba(255,255,255,.88);margin-top:8px}
+.chips a{text-decoration:none}
+
 /* evidence */
 .ev{display:grid;grid-template-columns:1fr 1.5fr;gap:16px}
 .evc{padding:22px 24px}
@@ -136,6 +161,7 @@ figcaption b{color:var(--navy)}
 footer{padding:40px 0 40px;font-size:12.5px;color:var(--ink-3);text-align:center}
 
 @media (max-width:1080px){
+  .projs{grid-template-columns:repeat(2,1fr)}
   .kpis{grid-template-columns:1fr 1fr}
   .ai-head{display:none}
   .ai-row{grid-template-columns:1fr 1fr}
@@ -146,6 +172,7 @@ footer{padding:40px 0 40px;font-size:12.5px;color:var(--ink-3);text-align:center
   .ev{grid-template-columns:1fr}
 }
 @media (max-width:760px){
+  .banner{padding:18px 20px}.banner h2{font-size:26px}
   .wrap{padding:0 16px}
   h1{font-size:30px}.lead{font-size:16.5px}h2{font-size:24px}
   .kpi .num{font-size:44px}
@@ -210,8 +237,7 @@ footer{padding:40px 0 40px;font-size:12.5px;color:var(--ink-3);text-align:center
 
 <!-- ===== 1. All in AI ===== -->
 <section class="block" id="ai">
-  <div class="sec-tag">重點一｜ALL IN AI</div>
-  <h2>我用 AI 做了什麼、解了 BU 哪些老問題</h2>
+  <div class="banner b1"><div class="sec-tag">重點一｜ALL IN AI</div><h2>我用 AI 做了什麼、解了 BU 哪些老問題</h2></div>
   <div class="ai-head"><div>AI 做了什麼</div><div>解了 BU 過去無解的問題</div><div>產能變化</div><div>幫大家提升了什麼</div></div>
   <div class="ai-grid">
     <div class="ai-row glass">
@@ -259,8 +285,7 @@ footer{padding:40px 0 40px;font-size:12.5px;color:var(--ink-3);text-align:center
 
 <!-- ===== 2. OKR ===== -->
 <section class="block" id="okr">
-  <div class="sec-tag">重點二｜BU OKR</div>
-  <h2>針對 BU OKR，我今年做了這些事</h2>
+  <div class="banner b2"><div class="sec-tag">重點二｜BU OKR</div><h2>針對 BU OKR，我今年做了這些事</h2></div>
   <div class="okr">
     <div class="kr glass">
       <div class="top"><span class="krid">KR｜易用性</span><span class="pill ok">✓ 已達成</span></div>
@@ -290,18 +315,20 @@ footer{padding:40px 0 40px;font-size:12.5px;color:var(--ink-3);text-align:center
       <h3>Claude 動態原型導入跨專案流程</h3>
       <div class="big">7<small>個專案</small></div>
       <div class="sub">用於需求評審與開發對齊</div>
-      <div class="chips"><span>Floor Plan Web</span><span>AiMesh Diagnostic</span><span>QIS</span><span>Network Diagnostic</span><span>Floor Plan</span><span>Site Manager</span><span>Router App</span></div>
+      <div class="chips"><a href="https://timyangasus.github.io/floorplan_web/floorplan_web_index.html" target="_blank" rel="noopener"><span>Floor Plan Web</span></a><a href="https://timyangasus.github.io/AiMesh-Diagnostic/AiMesh-Diagnostic_index.html" target="_blank" rel="noopener"><span>AiMesh Diagnostic</span></a><a href="https://timyangasus.github.io/QIS/QIS_index.html" target="_blank" rel="noopener"><span>QIS</span></a><a href="https://timyangasus.github.io/Network-Diagnostic/Network-Diagnostic_index.html" target="_blank" rel="noopener"><span>Network Diagnostic</span></a><a href="https://timyangasus.github.io/floor-plan/" target="_blank" rel="noopener"><span>Floor Plan</span></a><a href="https://timyangasus.github.io/site-manager/" target="_blank" rel="noopener"><span>Site Manager</span></a><a href="https://timyangasus.github.io/router-app/" target="_blank" rel="noopener"><span>Router App</span></a></div>
     </div>
   </div>
 
-  <div class="done-list glass">
-    <h3>今年的工作軌跡</h3>
-    <div class="tl">
-      <div class="m"><div class="when">1 月</div><b>初階使用者研究</b><span>10 位使用者 1 對 1 訪談＋Demo UI 測試，SUS 65.8 → V1 72，找出三項核心洞察</span></div>
-      <div class="m"><div class="when">8 月</div><b>季會提出 V2 方向</b><span>功能三層分層、91 → 50 項目標、V2 驗證目標 80+</span></div>
-      <div class="m"><div class="when">10 月</div><b>V2 驗證達標</b><span>24 位受測者操作 V2 原型，SUS 80.42 達成目標</span></div>
-      <div class="m"><div class="when">全年</div><b>AI 設計與動態原型</b><span>PM、RD 想法轉成 19 份視覺提案；Claude 動態原型導入 7 個專案</span></div>
-    </div>
+  <div class="proj-head"><h3>7 個專案｜點縮圖直接操作原型</h3><span>開啟線上原型（新分頁）</span></div>
+  <div class="projs">
+    <div class="pj glass count"><div class="v">7</div><span>個專案導入 Claude 動態原型，PM、RD 評審時直接試走</span></div>
+    <a class="pj glass" href="https://timyangasus.github.io/floorplan_web/floorplan_web_index.html" target="_blank" rel="noopener"><div class="shot"><img src="{{thumb-floorplan_web}}" alt="Floor Plan Web 原型畫面"></div><div class="meta"><div><b>Floor Plan Web</b><small>居家 WiFi 規劃（Web）</small></div><span class="go">開啟 ↗</span></div></a>
+    <a class="pj glass" href="https://timyangasus.github.io/AiMesh-Diagnostic/AiMesh-Diagnostic_index.html" target="_blank" rel="noopener"><div class="shot"><img src="{{thumb-aimesh}}" alt="AiMesh Diagnostic 原型畫面"></div><div class="meta"><div><b>AiMesh Diagnostic</b><small>Mesh 連線品質診斷</small></div><span class="go">開啟 ↗</span></div></a>
+    <a class="pj glass" href="https://timyangasus.github.io/QIS/QIS_index.html" target="_blank" rel="noopener"><div class="shot"><img src="{{thumb-qis}}" alt="QIS 原型畫面"></div><div class="meta"><div><b>QIS</b><small>快速設定流程 Prelink</small></div><span class="go">開啟 ↗</span></div></a>
+    <a class="pj glass" href="https://timyangasus.github.io/Network-Diagnostic/Network-Diagnostic_index.html" target="_blank" rel="noopener"><div class="shot"><img src="{{thumb-netdiag}}" alt="Network Diagnostic 原型畫面"></div><div class="meta"><div><b>Network Diagnostic</b><small>網路診斷</small></div><span class="go">開啟 ↗</span></div></a>
+    <a class="pj glass" href="https://timyangasus.github.io/floor-plan/" target="_blank" rel="noopener"><div class="shot"><img src="{{thumb-floorplan}}" alt="Floor Plan 原型畫面"></div><div class="meta"><div><b>Floor Plan</b><small>ASUS WiFi Floorplan（App）</small></div><span class="go">開啟 ↗</span></div></a>
+    <a class="pj glass" href="https://timyangasus.github.io/site-manager/" target="_blank" rel="noopener"><div class="shot"><img src="{{thumb-sitemgr}}" alt="Site Manager 原型畫面"></div><div class="meta"><div><b>Site Manager</b><small>ASUS Expert Site Manager</small></div><span class="go">開啟 ↗</span></div></a>
+    <a class="pj glass" href="https://timyangasus.github.io/router-app/" target="_blank" rel="noopener"><div class="shot"><img src="{{thumb-router}}" alt="Router App 原型畫面"></div><div class="meta"><div><b>Router App</b><small>Router App V2 首頁改版</small></div><span class="go">開啟 ↗</span></div></a>
   </div>
 </section>
 
