@@ -45,10 +45,14 @@ h1{font-size:42px;line-height:1.2;margin:8px 0 6px;color:var(--navy);letter-spac
 .kpi .from{font-size:14px;color:var(--ink-3);margin-top:6px;font-variant-numeric:tabular-nums}
 .kpi .from s{color:#9aa8bb}
 .kpi .foot{margin-top:auto;padding-top:12px}
-.kpi.hl{background:linear-gradient(160deg,rgba(47,111,224,.95),rgba(11,42,91,.95));border-color:rgba(255,255,255,.4)}
-.kpi.hl .cap,.kpi.hl .from{color:#cfe0ff}
-.kpi.hl .num,.kpi.hl .num small{color:#fff}
-.kpi.hl .pill.ok{background:rgba(255,255,255,.18);color:#fff}
+.kpi.c1,.kpi.c2,.kpi.c3,.kpi.c4{border-color:rgba(255,255,255,.4)}
+.kpi.c1{background:linear-gradient(160deg,rgba(47,111,224,.96),rgba(11,42,91,.96))}
+.kpi.c2{background:linear-gradient(160deg,rgba(14,165,184,.96),rgba(10,88,128,.96))}
+.kpi.c3{background:linear-gradient(160deg,rgba(32,178,140,.96),rgba(10,104,96,.96))}
+.kpi.c4{background:linear-gradient(160deg,rgba(56,132,240,.96),rgba(14,140,160,.96))}
+.kpi[class*=" c"] .cap,.kpi[class*=" c"] .from,.kpi[class*=" c"] .from s{color:rgba(255,255,255,.82)}
+.kpi[class*=" c"] .num,.kpi[class*=" c"] .num small{color:#fff}
+.kpi[class*=" c"] .pill{background:rgba(255,255,255,.2);color:#fff}
 
 /* sections */
 section.block{padding:52px 0 0}
@@ -81,7 +85,7 @@ h3{font-size:19px;color:var(--navy);margin:0}
 .cmp .row{display:grid;grid-template-columns:52px 1fr;align-items:center;gap:10px;margin-top:12px;font-size:13px;color:var(--ink-3)}
 .cmp .track{height:26px;border-radius:8px;background:rgba(15,27,45,.05);position:relative;overflow:hidden}
 .cmp .fill{position:absolute;inset:0 auto 0 0;border-radius:8px;display:flex;align-items:center;padding-left:10px;font-size:13px;font-weight:700;white-space:nowrap}
-.cmp .fill.old{background:#d5dde9;color:#44546a}
+.cmp .fill.old{background:#4a5566;color:#fff}
 .cmp .fill.new{background:var(--blue);color:#fff}
 .cmp .res{margin-top:14px;font-size:15px;color:var(--ink-2)}
 .cmp .res b{font-size:24px;color:var(--navy);margin-right:4px}
@@ -158,7 +162,7 @@ footer{padding:40px 0 40px;font-size:12.5px;color:var(--ink-3);text-align:center
 @media print{
   body{background:#fff}.nav{display:none}
   .glass{background:#fff;box-shadow:none;border:1px solid #dde3ec;-webkit-backdrop-filter:none;backdrop-filter:none}
-  .kpi.hl{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .kpi{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .kpi,.ai-row,.cmp,.kr,.evc,.done-list{break-inside:avoid;page-break-inside:avoid}
   h2{break-after:avoid}
 }
@@ -175,25 +179,25 @@ footer{padding:40px 0 40px;font-size:12.5px;color:var(--ink-3);text-align:center
   <h1>2026 年度 OKR 與 AI 導入成果</h1>
   <p class="lead">今年我把設計流程 <b>All in AI</b>：Router App V2 易用性 <b>達成 BU 目標</b>，Claude 動態原型導入 <b>7 個專案</b>，流程首稿從 2–3 天縮短到半天，PM、RD 確認週期從 2–3 週縮短到 2–3 天。</p>
   <div class="kpis">
-    <div class="kpi glass hl">
+    <div class="kpi glass c1">
       <div class="cap">BU OKR｜Router App SUS</div>
       <div class="num">80.42<small>分</small></div>
       <div class="from">目標 80 分以上</div>
-      <div class="foot"><span class="pill ok">✓ 達成率 100.5%</span></div>
+      <div class="foot"><span class="pill ok">✓ 達成率 100%</span></div>
     </div>
-    <div class="kpi glass">
+    <div class="kpi glass c2">
       <div class="cap">流程首稿產能</div>
       <div class="num">4–6<small>倍</small></div>
       <div class="from"><s>2–3 天</s> → 約半天</div>
       <div class="foot"><span class="pill info">單案動態首稿</span></div>
     </div>
-    <div class="kpi glass">
+    <div class="kpi glass c3">
       <div class="cap">PM、RD 確認週期</div>
       <div class="num">−80<small>%</small></div>
       <div class="from"><s>2–3 週</s> → 2–3 天</div>
       <div class="foot"><span class="pill info">需求討論到確認</span></div>
     </div>
-    <div class="kpi glass">
+    <div class="kpi glass c4">
       <div class="cap">AI 動態原型導入</div>
       <div class="num">7<small>個專案</small></div>
       <div class="from">Router App、AiMesh、QIS 等</div>
@@ -263,7 +267,7 @@ footer{padding:40px 0 40px;font-size:12.5px;color:var(--ink-3);text-align:center
       <h3>Router App V2 SUS 達 80 分以上</h3>
       <div class="big">80.42<small>/ 80</small></div>
       <div class="meter"><i style="width:100%"></i></div>
-      <div class="sub">達成率 100.5%｜24 位受測者</div>
+      <div class="sub">達成率 100%｜24 位受測者</div>
       <ul>
         <li>同批受測者：既有 App 72.40 → V2 <b>80.42（+8.02）</b></li>
         <li>ASUS 既有用戶 10 人：65.75 → <b>81.25（+15.50）</b></li>
