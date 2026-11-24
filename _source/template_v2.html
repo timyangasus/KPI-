@@ -127,7 +127,9 @@ h3{font-size:19px;color:var(--navy);margin:0}
 .proj-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin:22px 4px 12px}
 .proj-head h3{font-size:20px}
 .proj-head span{font-size:13.5px;color:var(--ink-3)}
-.projs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.projs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pj.feat{grid-column:span 2}
+.pj.feat .shot{aspect-ratio:16/8.2}
 .pj{display:block;text-decoration:none;color:inherit;padding:10px;transition:transform .15s,box-shadow .15s}
 .pj:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(31,64,122,.18)}
 .pj .shot{border-radius:14px;overflow:hidden;aspect-ratio:16/10;background:#e9eef5;box-shadow:0 0 0 1px rgba(15,27,45,.08)}
@@ -140,6 +142,27 @@ h3{font-size:19px;color:var(--navy);margin:0}
 .pj.count .v{font-size:56px;font-weight:800;line-height:1}
 .pj.count span{font-size:14.5px;color:rgba(255,255,255,.88);margin-top:8px}
 .chips a{text-decoration:none}
+
+
+/* flow format */
+.fsec{margin-top:26px}
+.fsec-head{margin:0 4px 12px}
+.fsec-head h3{font-size:22px}
+.fsec-head p{margin:4px 0 0;color:var(--ink-2);font-size:15px}
+.fcmp{display:grid;grid-template-columns:1.25fr 1fr;gap:16px}
+.fbox{padding:16px}
+.fbox .lab{display:flex;justify-content:space-between;align-items:center;margin:2px 4px 10px;font-weight:800;font-size:14px;color:var(--navy)}
+.fbox .shot{border-radius:12px;overflow:hidden;box-shadow:0 0 0 1px rgba(15,27,45,.1)}
+.fbox .shot img{width:100%}
+.fbox ul{margin:12px 4px 2px;padding:0;list-style:none}
+.fbox li{font-size:14px;color:var(--ink-2);margin:5px 0;padding-left:22px;position:relative}
+.fbox.old li::before{content:"✕";position:absolute;left:2px;color:#c2410c;font-weight:800;font-size:12px;top:2px}
+.fbox.new li::before{content:"✓";position:absolute;left:2px;color:var(--green);font-weight:800;font-size:13px;top:1px}
+.ffeat{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:16px}
+.ff{padding:16px 18px}
+.ff .ic{font-size:12px;font-weight:800;color:#fff;background:linear-gradient(120deg,#2f6fe0,#0ea5b8);border-radius:8px;padding:3px 8px;display:inline-block}
+.ff b{display:block;color:var(--navy);font-size:16px;margin-top:8px}
+.ff span{display:block;font-size:13.5px;color:var(--ink-2);margin-top:4px;line-height:1.55}
 
 /* evidence */
 .ev{display:grid;grid-template-columns:1fr 1.5fr;gap:16px}
@@ -162,6 +185,7 @@ footer{padding:40px 0 40px;font-size:12.5px;color:var(--ink-3);text-align:center
 
 @media (max-width:1080px){
   .projs{grid-template-columns:repeat(2,1fr)}
+  .pj.feat{grid-column:1/-1}
   .kpis{grid-template-columns:1fr 1fr}
   .ai-head{display:none}
   .ai-row{grid-template-columns:1fr 1fr}
@@ -172,7 +196,7 @@ footer{padding:40px 0 40px;font-size:12.5px;color:var(--ink-3);text-align:center
   .ev{grid-template-columns:1fr}
 }
 @media (max-width:760px){
-  .banner{padding:18px 20px}.banner h2{font-size:26px}
+  .projs{grid-template-columns:1fr}.pj.feat .shot{aspect-ratio:16/10}.fcmp{grid-template-columns:1fr !important}.ffeat{grid-template-columns:1fr 1fr !important}.banner{padding:18px 20px}.banner h2{font-size:26px}
   .wrap{padding:0 16px}
   h1{font-size:30px}.lead{font-size:16.5px}h2{font-size:24px}
   .kpi .num{font-size:44px}
@@ -198,7 +222,7 @@ footer{padding:40px 0 40px;font-size:12.5px;color:var(--ink-3);text-align:center
 <body>
 <nav class="nav"><div class="wrap"><div class="bar glass">
   <span class="brand">2026 OKR 與 AI 導入成果</span>
-  <div class="links"><a href="#ai">All in AI</a><a href="#okr">BU OKR</a><a href="#evidence">實際畫面</a></div>
+  <div class="links"><a href="#ai">All in AI</a><a href="#okr">BU OKR</a><a href="#flow-format">Flow 格式</a></div>
 </div></div></nav>
 
 <header class="hero"><div class="wrap">
@@ -281,6 +305,35 @@ footer{padding:40px 0 40px;font-size:12.5px;color:var(--ink-3);text-align:center
     </div>
   </div>
   <p class="note">估算方式：每個專案以一條主要流程計，2–3 週以 10–15 個工作天計；首稿每案省 1.5–2.5 天，確認週期每案省 8–12 天，乘以 7 個專案。半天首稿含提示詞撰寫、人工修改與試走。</p>
+  <div class="fsec" id="flow-format">
+    <div class="fsec-head"><h3>建立系統化的動態 Flow 格式</h3><p>不只是做原型：我把動態流程定成一套固定格式，取代滿版箭頭的靜態流程圖，AiMesh Diagnostic、QIS、Floor Plan Web、Site Manager 等專案共用。</p></div>
+    <div class="fcmp">
+      <div class="fbox glass old">
+        <div class="lab"><span>過去｜Figma 靜態 UE Flow</span><span class="pill warn">AiMesh Diagnostic</span></div>
+        <div class="shot"><img src="{{flow-figma}}" alt="AiMesh Diagnostic 的 Figma 靜態流程，頁面之間有大量交錯箭頭"></div>
+        <ul>
+          <li>頁面一多，箭頭交錯、繞線，很難看出正確路徑</li>
+          <li>同一頁面的不同情境要複製成多張圖，修改要逐張同步</li>
+          <li>頁面編碼手動維護，容易漏改、對不上規格</li>
+        </ul>
+      </div>
+      <div class="fbox glass new">
+        <div class="lab"><span>現在｜Claude 動態 Flow 格式</span><span class="pill ok">可直接操作</span></div>
+        <div class="shot"><img src="{{flow-demo}}" alt="AiMesh Diagnostic 動態原型：上方頁碼選單與說明，右下流程判斷面板"></div>
+        <ul>
+          <li>頁碼選單列出每一頁與說明，點一下就跳到該頁</li>
+          <li>流程判斷面板在同一頁切換情境，不必重畫</li>
+          <li>頁碼由原型統一產生，與規格表一一對應</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ffeat">
+      <div class="ff glass"><span class="ic">1_020</span><b>頁面編號</b><span>依流程分段編碼（1 主流程、2 歷史紀錄、3 進階測試），PM、RD 用同一套頁碼溝通</span></div>
+      <div class="ff glass"><span class="ic">跳轉</span><b>快速查看各頁</b><span>頁碼選單一鍵跳到任一頁，評審時不用從頭點</span></div>
+      <div class="ff glass"><span class="ic">判斷</span><b>同頁多情境</b><span>例：節點全部支援／有節點無法測試，選一下就走不同分支</span></div>
+      <div class="ff glass"><span class="ic">說明</span><b>每頁自帶說明</b><span>上方說明列寫清楚這一頁的行為，RESET 一鍵回起點</span></div>
+    </div>
+  </div>
 </section>
 
 <!-- ===== 2. OKR ===== -->
@@ -321,6 +374,7 @@ footer{padding:40px 0 40px;font-size:12.5px;color:var(--ink-3);text-align:center
 
   <div class="proj-head"><h3>7 個專案｜點縮圖直接操作原型</h3><span>開啟線上原型（新分頁）</span></div>
   <div class="projs">
+    <a class="pj glass feat" href="https://timyangasus.github.io/router-app/" target="_blank" rel="noopener"><div class="shot"><img src="{{thumb-router}}" alt="Router App 原型畫面"></div><div class="meta"><div><b>Router App</b><small>Router App V2 首頁改版</small></div><span class="go">開啟 ↗</span></div></a>
     <div class="pj glass count"><div class="v">7</div><span>個專案導入 Claude 動態原型，PM、RD 評審時直接試走</span></div>
     <a class="pj glass" href="https://timyangasus.github.io/floorplan_web/floorplan_web_index.html" target="_blank" rel="noopener"><div class="shot"><img src="{{thumb-floorplan_web}}" alt="Floor Plan Web 原型畫面"></div><div class="meta"><div><b>Floor Plan Web</b><small>居家 WiFi 規劃（Web）</small></div><span class="go">開啟 ↗</span></div></a>
     <a class="pj glass" href="https://timyangasus.github.io/AiMesh-Diagnostic/AiMesh-Diagnostic_index.html" target="_blank" rel="noopener"><div class="shot"><img src="{{thumb-aimesh}}" alt="AiMesh Diagnostic 原型畫面"></div><div class="meta"><div><b>AiMesh Diagnostic</b><small>Mesh 連線品質診斷</small></div><span class="go">開啟 ↗</span></div></a>
@@ -328,35 +382,9 @@ footer{padding:40px 0 40px;font-size:12.5px;color:var(--ink-3);text-align:center
     <a class="pj glass" href="https://timyangasus.github.io/Network-Diagnostic/Network-Diagnostic_index.html" target="_blank" rel="noopener"><div class="shot"><img src="{{thumb-netdiag}}" alt="Network Diagnostic 原型畫面"></div><div class="meta"><div><b>Network Diagnostic</b><small>網路診斷</small></div><span class="go">開啟 ↗</span></div></a>
     <a class="pj glass" href="https://timyangasus.github.io/floor-plan/" target="_blank" rel="noopener"><div class="shot"><img src="{{thumb-floorplan}}" alt="Floor Plan 原型畫面"></div><div class="meta"><div><b>Floor Plan</b><small>ASUS WiFi Floorplan（App）</small></div><span class="go">開啟 ↗</span></div></a>
     <a class="pj glass" href="https://timyangasus.github.io/site-manager/" target="_blank" rel="noopener"><div class="shot"><img src="{{thumb-sitemgr}}" alt="Site Manager 原型畫面"></div><div class="meta"><div><b>Site Manager</b><small>ASUS Expert Site Manager</small></div><span class="go">開啟 ↗</span></div></a>
-    <a class="pj glass" href="https://timyangasus.github.io/router-app/" target="_blank" rel="noopener"><div class="shot"><img src="{{thumb-router}}" alt="Router App 原型畫面"></div><div class="meta"><div><b>Router App</b><small>Router App V2 首頁改版</small></div><span class="go">開啟 ↗</span></div></a>
   </div>
 </section>
 
-<!-- ===== Evidence ===== -->
-<section class="block" id="evidence">
-  <div class="sec-tag">實際畫面</div>
-  <h2>成果都在可操作的原型裡</h2>
-  <div class="ev">
-    <div class="evc glass">
-      <h3>Router App 首頁改版</h3>
-      <p class="muted">狀態、裝置、常用功能放到第一層</p>
-      <div class="pair two">
-        <figure><span class="tag old">既有版本</span><div class="phone"><img src="{{old-home}}" alt="既有 Router App 首頁"></div><figcaption>以路由器圖片為主，狀態藏在小卡（英文介面）</figcaption></figure>
-        <figure><span class="tag new">V2</span><div class="phone"><img src="{{v2-home}}" alt="Router App V2 首頁"></div><figcaption><b>網路一切正常</b>、連線裝置數一眼看到</figcaption></figure>
-      </div>
-    </div>
-    <div class="evc glass">
-      <h3>Claude 動態流程｜AiMesh Diagnostic</h3>
-      <p class="muted">節點不支援時的替代路徑，PM、RD 在評審當下直接試走</p>
-      <div class="pair three">
-        <figure><span class="tag new">1 操作</span><div class="phone tall"><img src="{{aimesh-home}}" alt="AiMesh Diagnostic 首頁"></div><figcaption>按 <b>Start</b> 開始快速測試</figcaption></figure>
-        <figure><span class="tag new">2 系統回饋</span><div class="phone tall"><img src="{{aimesh-home-quick-unavailable}}" alt="無法使用快速測試"></div><figcaption>節點不支援或離線，提示<b>無法使用快速測試</b></figcaption></figure>
-        <figure><span class="tag new">3 下一步</span><div class="phone tall"><img src="{{aimesh-advanced}}" alt="Advanced Test"></div><figcaption>改用 <b>Advanced Test</b> 自選兩台裝置</figcaption></figure>
-      </div>
-      <div class="confirm">開發前就確認：不支援時不進測試頁、改導向 Advanced Test；提示不列出個別裝置。</div>
-    </div>
-  </div>
-</section>
 
 </main>
 <footer>2026 年度 OKR 與 AI 導入成果｜Networking BU｜版本 2026/11/24 v2</footer>
