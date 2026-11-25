@@ -117,6 +117,16 @@ h3{font-size:19px;color:var(--navy);margin:0}
 .tl .m .when{font-size:12px;font-weight:800;color:var(--blue);letter-spacing:.04em}
 
 
+/* UAT findings */
+.uat{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+.uat .u{padding:20px 22px}
+.uat .k{font-size:12.5px;font-weight:800;color:var(--ink-3);letter-spacing:.06em}
+.uat .v{font-size:34px;font-weight:800;line-height:1.15;color:var(--navy);margin:6px 0 4px;font-variant-numeric:tabular-nums}
+.uat .v small{font-size:15px;color:var(--ink-3);font-weight:700;margin-left:4px}
+.uat p{margin:0;font-size:14px;color:var(--ink-2)}
+.uat q{display:block;font-size:17px;font-weight:700;color:var(--navy);line-height:1.5;margin:8px 0 6px;quotes:"「" "」"}
+.uat q+q{margin-top:4px}
+@media (max-width:760px){.uat{grid-template-columns:1fr}}
 /* section banner */
 .banner{display:block;padding:22px 30px;border-radius:var(--radius);margin:0 0 20px;color:#fff;box-shadow:0 10px 30px rgba(31,64,122,.18),inset 0 1px 0 rgba(255,255,255,.35);border:1px solid rgba(255,255,255,.35)}
 .banner.b1{background:linear-gradient(120deg,#2f6fe0,#0b2a5b)}
@@ -350,6 +360,7 @@ footer{padding:40px 0 40px;font-size:12.5px;color:var(--ink-3);text-align:center
         <li>同批受測者：既有 App 72.40 → V2 <b>80.42（+8.02）</b></li>
         <li>ASUS 既有用戶 10 人：65.75 → <b>81.25（+15.50）</b></li>
         <li>歷程：1 月既有 App 65.8 → V1 72 → V2 80.42</li>
+        <li>高於業界 SUS 平均 <b>68</b>、一般消費性 App <b>70–75</b></li>
       </ul>
     </div>
     <div class="kr glass">
@@ -372,6 +383,12 @@ footer{padding:40px 0 40px;font-size:12.5px;color:var(--ink-3);text-align:center
     </div>
   </div>
 
+  <div class="uat">
+    <div class="u glass"><div class="k">UAT｜自家用戶最有感</div><div class="v">+15.5<small>vs 他牌 +0.8～3.5</small></div><p>ASUS 舊用戶的提升幅度，遠高於 Deco、Tether 等他牌用戶：改版解決的是自家產品原本的問題</p></div>
+    <div class="u glass"><div class="k">UAT｜主力 IT 專家用戶</div><div class="v">66.7 → 88.3<small>+21.6</small></div><p>ASUS 主力用戶是 IT 專家，評價高於一般用戶</p></div>
+    <div class="u glass"><div class="k">UAT｜使用者怎麼說</div><q>進步非常多</q><q>出問題時首頁換色提醒，非常清楚</q><p>研究建議以首頁「藍色色塊」作為 ASUS Router 代表視覺</p></div>
+  </div>
+
   <div class="proj-head"><h3>7 個專案｜點縮圖直接操作原型</h3><span>開啟線上原型（新分頁）</span></div>
   <div class="projs">
     <a class="pj glass feat" href="https://timyangasus.github.io/router-app/" target="_blank" rel="noopener"><div class="shot"><img src="{{thumb-router}}" alt="Router App 原型畫面"></div><div class="meta"><div><b>Router App</b><small>Router App V2 首頁改版</small></div><span class="go">開啟 ↗</span></div></a>
@@ -387,6 +404,6 @@ footer{padding:40px 0 40px;font-size:12.5px;color:var(--ink-3);text-align:center
 
 
 </main>
-<footer>2026 年度 OKR 與 AI 導入成果｜Networking BU｜版本 2026/11/24 v2</footer>
+<footer>2026 年度 OKR 與 AI 導入成果｜Networking BU｜版本 2026/11/25</footer>
 </body>
 </html>
