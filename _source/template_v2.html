@@ -48,7 +48,7 @@ h1{font-size:42px;line-height:1.2;margin:8px 0 6px;color:var(--navy);letter-spac
 .kpi.c1{--ac:#1f5fd6;--ac-soft:rgba(31,95,214,.1)}
 .kpi.c2{--ac:#0b8ca3;--ac-soft:rgba(11,140,163,.1)}
 .kpi.c3{--ac:#12895f;--ac-soft:rgba(18,137,95,.1)}
-.kpi.c4{--ac:#6a4fd8;--ac-soft:rgba(106,79,216,.1)}
+.kpi.c4{--ac:#1677b8;--ac-soft:rgba(22,119,184,.1)}
 .kpi[class*=" c"] .num,.kpi[class*=" c"] .num small{color:var(--ac)}
 .kpi[class*=" c"] .pill{background:var(--ac-soft);color:var(--ac)}
 
@@ -84,9 +84,13 @@ h3{font-size:19px;color:var(--navy);margin:0}
 .cmp .track{height:26px;border-radius:8px;background:rgba(15,27,45,.05);position:relative;overflow:hidden}
 .cmp .fill{position:absolute;inset:0 auto 0 0;border-radius:8px;display:flex;align-items:center;padding-left:10px;font-size:13px;font-weight:700;white-space:nowrap}
 .cmp .fill.old{background:#4a5566;color:#fff}
-.cmp .fill.new{background:var(--blue);color:#fff}
+.cmp .fill.new{background:var(--blue);color:#fff;min-width:fit-content;padding-right:10px}
 .cmp .res{margin-top:14px;font-size:15px;color:var(--ink-2)}
 .cmp .res b{font-size:24px;color:var(--navy);margin-right:4px}
+.ai-intro{padding:18px 24px;margin:0 0 18px;font-size:17px;line-height:1.75;color:var(--ink-2)}
+.ai-intro b{color:var(--navy)}
+.support{padding:14px 22px;margin-top:16px;font-size:15px;color:var(--ink-2)}
+.support b{color:var(--navy);margin-right:8px}
 .note{font-size:13px;color:var(--ink-3);margin:12px 4px 0}
 
 /* OKR */
@@ -224,7 +228,10 @@ footer{padding:40px 0 40px;font-size:12.5px;color:var(--ink-3);text-align:center
   body{background:#fff}.nav{display:none}
   .glass{background:#fff;box-shadow:none;border:1px solid #dde3ec;-webkit-backdrop-filter:none;backdrop-filter:none}
   .kpi{-webkit-print-color-adjust:exact;print-color-adjust:exact}
-  .kpi,.ai-row,.cmp,.kr,.evc,.done-list{break-inside:avoid;page-break-inside:avoid}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .kpi,.ai-row,.cmp,.kr,.u,.fbox,.ff,.pj,.banner,.ai-intro,.support{break-inside:avoid;page-break-inside:avoid}
+  .banner{break-after:avoid;box-shadow:none}
+  .kpi,.okmark,.pj,.fbox .shot{box-shadow:none !important}
   h2{break-after:avoid}
 }
 </style>
@@ -238,31 +245,31 @@ footer{padding:40px 0 40px;font-size:12.5px;color:var(--ink-3);text-align:center
 <header class="hero"><div class="wrap">
   <div class="eyebrow">Networking BU｜2026 年度個人績效報告｜12/01 繳交・12/07 年度成果討論</div>
   <h1>2026 年度 OKR 與 AI 導入成果</h1>
-  <p class="lead">今年我把設計流程 <b>All in AI</b>：Router App V2 易用性 <b>達成 BU 目標</b>，Claude 動態原型導入 <b>7 個專案</b>，流程首稿從 2–3 天縮短到半天，PM、RD 確認週期從 2–3 週縮短到 2–3 天。</p>
+  <p class="lead">今年我把設計流程 <b>All in AI</b>：Router App V2 SUS <b>達標</b>，Claude 動態原型導入 <b>7 個專案</b>，讓 PM、RD 在開發前就能試走並確認規格。</p>
   <div class="kpis">
     <div class="kpi glass c1">
       <div class="cap">BU OKR｜Router App SUS</div>
       <div class="num">80.42<small>分</small></div>
-      <div class="from">目標 80 分以上</div>
-      <div class="foot"><span class="pill ok">✓ 達成率 100%</span></div>
+      <div class="from">同批 24 位受測者 +8.02 分</div>
+      <div class="foot"><span class="pill ok">✓ 達成率 100%（目標 80）</span></div>
     </div>
     <div class="kpi glass c2">
-      <div class="cap">流程首稿產能</div>
+      <div class="cap">單案首稿產能</div>
       <div class="num">4–6<small>倍</small></div>
-      <div class="from"><s>2–3 天</s> → 約半天</div>
-      <div class="foot"><span class="pill info">單案動態首稿</span></div>
+      <div class="from"><s>2–3 個工作天</s> → 約半天</div>
+      <div class="foot"><span class="pill info">Claude 動態 Flow</span></div>
     </div>
     <div class="kpi glass c3">
-      <div class="cap">PM、RD 確認週期</div>
-      <div class="num">−80<small>%</small></div>
-      <div class="from"><s>2–3 週</s> → 2–3 天</div>
-      <div class="foot"><span class="pill info">需求討論到確認</span></div>
+      <div class="cap">PM／RD 確認週期</div>
+      <div class="num">80<small>% 縮短</small></div>
+      <div class="from"><s>2–3 週</s> → 約 2–3 個工作天</div>
+      <div class="foot"><span class="pill info">開發前確認規格</span></div>
     </div>
     <div class="kpi glass c4">
-      <div class="cap">AI 動態原型導入</div>
+      <div class="cap">導入 Claude 動態原型</div>
       <div class="num">7<small>個專案</small></div>
       <div class="from">Router App、AiMesh、QIS 等</div>
-      <div class="foot"><span class="pill info">跨專案落地</span></div>
+      <div class="foot"><span class="pill info">✓ 已導入</span></div>
     </div>
   </div>
 </div></header>
@@ -272,70 +279,68 @@ footer{padding:40px 0 40px;font-size:12.5px;color:var(--ink-3);text-align:center
 <!-- ===== 1. All in AI ===== -->
 <section class="block" id="ai">
   <div class="banner b1"><div class="sec-tag">重點一｜ALL IN AI</div><h2>我用 AI 做了什麼、解了 BU 哪些老問題</h2></div>
+  <p class="ai-intro glass">過去遇到斷線、弱訊號或重連，PM、RD 得沿著 Figma 箭頭逐張核對，我也要反覆補圖、改頁碼。今年我用 Claude 建立<b>可編號、跳頁、切換情境的動態 Flow</b>，讓 PM、RD 在開發前直接試走並確認規格。</p>
   <div class="ai-head"><div>AI 做了什麼</div><div>解了 BU 過去無解的問題</div><div>產能變化</div><div>幫大家提升了什麼</div></div>
   <div class="ai-grid">
     <div class="ai-row glass">
       <div class="what"><span class="idx">1</span><b>Claude 動態原型取代逐頁 UE Flow</b><span>需求直接變成可點擊的網頁原型</span></div>
-      <div><p>靜態 Figma 流程看不出<b>轉場、等待、異常分支與返回方式</b>，團隊各自理解不同，只能反覆補圖、開會確認。</p></div>
-      <div class="gain"><div class="v">4–6<small>倍</small></div><div class="k">首稿 2–3 天 → 約半天<br>確認週期 2–3 週 → 2–3 天</div></div>
-      <div class="who"><ul><li><em>PM</em>評審當下就能試走，提早發現缺漏情境</li><li><em>RD</em>開發前對齊轉場與異常去向，降低返工</li><li><em>設計</em>省下畫稿時間，專注分支與例外</li></ul></div>
+      <div><p>靜態 Figma 看不出<b>轉場與異常分支</b>，只能逐張核對、反覆補圖開會。</p></div>
+      <div class="gain"><div class="v">4–6<small>倍</small></div><div class="k">首稿 2–3 個工作天 → 約半天<br>確認 2–3 週 → 約 2–3 個工作天</div></div>
+      <div class="who"><ul><li><em>PM</em>評審當下試走，提早補齊情境</li><li><em>RD</em>開發前對齊異常去向，減少返工</li><li><em>設計</em>少畫稿，專注分支與例外</li></ul></div>
     </div>
     <div class="ai-row glass">
       <div class="what"><span class="idx">2</span><b>可操作原型直接給使用者測</b><span>用真實行為決定功能入口</span></div>
-      <div><p>平面稿無法驗證使用者<b>會先點哪裡、找不找得到設定、遇到異常怎麼做</b>，改版方向缺少依據。</p></div>
+      <div><p>平面稿測不出使用者<b>先點哪裡、遇到異常怎麼做</b>，改版缺少依據。</p></div>
       <div class="gain"><div class="v">80.42<small>分</small></div><div class="k">V2 SUS，同批 24 人<br>較既有 App 提升 8.02 分</div></div>
-      <div class="who"><ul><li><em>使用者</em>一眼看懂網路狀態，異常能立即處理</li><li><em>BU</em>改版有數據支持，達成 OKR</li></ul></div>
+      <div class="who"><ul><li><em>使用者</em>一眼看懂網路狀態</li><li><em>BU</em>改版有數據支持</li></ul></div>
     </div>
   </div>
 
   <div class="compare">
     <div class="cmp glass">
       <div class="t">單案流程首稿</div>
-      <div class="row"><span>過去</span><div class="track"><div class="fill old" style="width:100%">2–3 天</div></div></div>
-      <div class="row"><span>現在</span><div class="track"><div class="fill new" style="width:20%">半天</div></div></div>
+      <div class="row"><span>過去</span><div class="track"><div class="fill old" style="width:100%">2–3 個工作天</div></div></div>
+      <div class="row"><span>現在</span><div class="track"><div class="fill new" style="width:20%">約半天</div></div></div>
       <div class="res"><b>4–6 倍</b>產能</div>
     </div>
     <div class="cmp glass">
-      <div class="t">需求討論到 PM、RD 確認</div>
+      <div class="t">PM／RD 確認週期</div>
       <div class="row"><span>過去</span><div class="track"><div class="fill old" style="width:100%">2–3 週</div></div></div>
-      <div class="row"><span>現在</span><div class="track"><div class="fill new" style="width:20%">2–3 天</div></div></div>
-      <div class="res"><b>約 80%</b>時間縮短</div>
+      <div class="row"><span>現在</span><div class="track"><div class="fill new" style="width:20%">約 2–3 個工作天</div></div></div>
+      <div class="res"><b>約 80%</b>縮短</div>
     </div>
     <div class="cmp glass">
       <div class="t">7 個專案合計（估算）</div>
-      <div class="row"><span>首稿</span><div class="track" style="background:none"><div class="fill new" style="position:static;display:inline-flex;height:26px;padding:0 12px">省約 10–17 個工作天</div></div></div>
-      <div class="row"><span>確認</span><div class="track" style="background:none"><div class="fill new" style="position:static;display:inline-flex;height:26px;padding:0 12px">省約 56–84 個工作天</div></div></div>
-      <div class="res"><b>約 2.5–4 個月</b>確認時間</div>
+      <div class="res" style="margin-top:12px"><b>56–84</b>個工作天</div>
+      <p class="note" style="margin:6px 0 0;font-size:14px;color:var(--ink-2)">各案確認週期加總估算約縮短 56–84 個工作天</p>
     </div>
   </div>
-  <p class="note">估算方式：每個專案以一條主要流程計，2–3 週以 10–15 個工作天計；首稿每案省 1.5–2.5 天，確認週期每案省 8–12 天，乘以 7 個專案。半天首稿含提示詞撰寫、人工修改與試走。</p>
+  <p class="note">估算：每案以一條主要流程計，2–3 週以 10–15 個工作天計，每案省 8–12 個工作天 × 7 案。</p>
   <div class="fsec" id="flow-format">
-    <div class="fsec-head"><h3>建立系統化的動態 Flow 格式</h3><p>不只是做原型：我把動態流程定成一套固定格式，取代滿版箭頭的靜態流程圖，AiMesh Diagnostic、QIS、Floor Plan Web、Site Manager 等專案共用。</p></div>
+    <div class="fsec-head"><h3>建立系統化的動態 Flow 格式</h3><p>取代滿版箭頭的靜態流程圖，AiMesh Diagnostic、QIS、Floor Plan Web、Site Manager 共用。</p></div>
     <div class="fcmp">
       <div class="fbox glass old">
         <div class="lab"><span>過去｜Figma 靜態 UE Flow</span><span class="pill warn">AiMesh Diagnostic</span></div>
         <div class="shot"><img src="{{flow-figma}}" alt="AiMesh Diagnostic 的 Figma 靜態流程，頁面之間有大量交錯箭頭"></div>
         <ul>
-          <li>頁面一多，箭頭交錯、繞線，很難看出正確路徑</li>
-          <li>同一頁面的不同情境要複製成多張圖，修改要逐張同步</li>
-          <li>頁面編碼手動維護，容易漏改、對不上規格</li>
+          <li>箭頭交錯，難看出正確路徑</li>
+          <li>多情境要複製多張圖，頁碼手動維護易出錯</li>
         </ul>
       </div>
       <div class="fbox glass new">
         <div class="lab"><span>現在｜Claude 動態 Flow 格式</span><span class="pill ok">可直接操作</span></div>
         <div class="shot"><img src="{{flow-demo}}" alt="AiMesh Diagnostic 動態原型：上方頁碼選單與說明，右下流程判斷面板"></div>
         <ul>
-          <li>頁碼選單列出每一頁與說明，點一下就跳到該頁</li>
-          <li>流程判斷面板在同一頁切換情境，不必重畫</li>
-          <li>頁碼由原型統一產生，與規格表一一對應</li>
+          <li>頁碼選單一點就跳到該頁</li>
+          <li>同一頁切換情境，頁碼與規格一一對應</li>
         </ul>
       </div>
     </div>
     <div class="ffeat">
-      <div class="ff glass"><span class="ic">1_020</span><b>頁面編號</b><span>依流程分段編碼（1 主流程、2 歷史紀錄、3 進階測試），PM、RD 用同一套頁碼溝通</span></div>
-      <div class="ff glass"><span class="ic">跳轉</span><b>快速查看各頁</b><span>頁碼選單一鍵跳到任一頁，評審時不用從頭點</span></div>
-      <div class="ff glass"><span class="ic">判斷</span><b>同頁多情境</b><span>例：節點全部支援／有節點無法測試，選一下就走不同分支</span></div>
-      <div class="ff glass"><span class="ic">說明</span><b>每頁自帶說明</b><span>上方說明列寫清楚這一頁的行為，RESET 一鍵回起點</span></div>
+      <div class="ff glass"><span class="ic">1_020</span><b>頁面編號</b><span>依流程分段編碼，PM、RD 用同一套頁碼溝通</span></div>
+      <div class="ff glass"><span class="ic">跳轉</span><b>快速查看各頁</b><span>一鍵跳到任一頁，評審不用從頭點</span></div>
+      <div class="ff glass"><span class="ic">判斷</span><b>同頁多情境</b><span>選一下就走不同分支，不必重畫</span></div>
+      <div class="ff glass"><span class="ic">說明</span><b>每頁自帶說明</b><span>說明列寫清楚這一頁的行為</span></div>
     </div>
   </div>
 </section>
@@ -345,23 +350,22 @@ footer{padding:40px 0 40px;font-size:12.5px;color:var(--ink-3);text-align:center
   <div class="banner b2"><div class="sec-tag">重點二｜BU OKR</div><h2>針對 BU OKR，我今年做了這些事</h2></div>
   <div class="okr">
     <div class="kr glass">
-      <div class="top"><span class="krid">KR｜易用性</span><span class="pill ok">✓ 已達成</span></div>
+      <div class="top"><span class="krid">KR｜易用性</span><span class="pill ok">✓ 已達標</span></div>
       <h3>Router App V2 SUS 達 80 分以上</h3>
       <div class="big"><span class="okmark" aria-label="已達成"><svg viewBox="0 0 24 24"><path d="M6 12.5l4 4 8-9"/></svg></span>80.42<small>/ 80</small></div>
       <div class="meter"><i style="width:100%"></i></div>
       <div class="sub">達成率 100%｜24 位受測者</div>
       <ul>
-        <li>同批受測者：既有 App 72.40 → V2 <b>80.42（+8.02）</b></li>
-        <li>ASUS 既有用戶 10 人：65.75 → <b>81.25（+15.50）</b></li>
-        <li>歷程：1 月既有 App 65.8 → V1 72 → V2 80.42</li>
-        <li>高於業界 SUS 平均 <b>68</b>、一般消費性 App <b>70–75</b></li>
+        <li><b>1 月研究</b>：10 位初階使用者，既有 App 65.8 分，找出改版方向</li>
+        <li><b>10 月 V2 驗證</b>：同批 24 人，72.40 → <b>80.42（+8.02）</b>；ASUS 既有用戶 65.75 → <b>81.25</b></li>
+        <li>高於業界 SUS 平均 <b>68</b></li>
       </ul>
     </div>
     <div class="kr glass">
       <div class="top"><span class="krid">KR｜功能分層</span><span class="pill warn">設計目標</span></div>
       <h3>App 功能重新分層，聚焦日常管理</h3>
       <div class="big">91 → 50<small>項</small></div>
-      <div class="sub">App 收斂約 45%，專業功能移到進階設定與 Web GUI，不刪除</div>
+      <div class="sub">App 收斂約 45%，專業功能移到進階設定與 Web GUI</div>
       <ul>
         <li><b>第一層 App</b>：網路狀態、Wi-Fi、裝置管理、家庭守護、AI 診斷</li>
         <li><b>第二層 進階設定</b>：WAN／LAN、VPN、QoS、DDNS 等</li>
@@ -369,18 +373,20 @@ footer{padding:40px 0 40px;font-size:12.5px;color:var(--ink-3);text-align:center
       </ul>
     </div>
     <div class="kr glass">
-      <div class="top"><span class="krid">KR｜AI 導入</span><span class="pill ok">✓ 7 個專案</span></div>
+      <div class="top"><span class="krid">KR｜AI 導入</span><span class="pill ok">✓ 已導入</span></div>
       <h3>Claude 動態原型導入跨專案流程</h3>
       <div class="big">7<small>個專案</small></div>
-      <div class="sub">用於需求評審與開發對齊</div>
+      <div class="sub">需求評審與開發前確認規格</div>
       <div class="chips"><a href="https://timyangasus.github.io/floorplan_web/floorplan_web_index.html" target="_blank" rel="noopener"><span>Floor Plan Web</span></a><a href="https://timyangasus.github.io/AiMesh-Diagnostic/AiMesh-Diagnostic_index.html" target="_blank" rel="noopener"><span>AiMesh Diagnostic</span></a><a href="https://timyangasus.github.io/QIS/QIS_index.html" target="_blank" rel="noopener"><span>QIS</span></a><a href="https://timyangasus.github.io/Network-Diagnostic/Network-Diagnostic_index.html" target="_blank" rel="noopener"><span>Network Diagnostic</span></a><a href="https://timyangasus.github.io/floor-plan/" target="_blank" rel="noopener"><span>Floor Plan</span></a><a href="https://timyangasus.github.io/site-manager/" target="_blank" rel="noopener"><span>Site Manager</span></a><a href="https://timyangasus.github.io/router-app/" target="_blank" rel="noopener"><span>Router App</span></a></div>
     </div>
   </div>
 
+  <p class="support glass"><b>設計支援</b>QIS 初始設定、AiMesh 異常處理、Site Manager 管理流程</p>
+
   <div class="uat">
-    <div class="u glass"><div class="k">UAT｜自家用戶最有感</div><div class="v">+15.5<small>vs 他牌 +0.8～3.5</small></div><p>ASUS 舊用戶的提升幅度，遠高於 Deco、Tether 等他牌用戶：改版解決的是自家產品原本的問題</p></div>
-    <div class="u glass"><div class="k">UAT｜主力 IT 專家用戶</div><div class="v">66.7 → 88.3<small>+21.6</small></div><p>ASUS 主力用戶是 IT 專家，評價高於一般用戶</p></div>
-    <div class="u glass"><div class="k">UAT｜使用者怎麼說</div><q>進步非常多</q><q>出問題時首頁換色提醒，非常清楚</q><p>研究建議以首頁「藍色色塊」作為 ASUS Router 代表視覺</p></div>
+    <div class="u glass"><div class="k">UAT｜自家用戶最有感</div><div class="v">+15.5<small>vs 他牌 +0.8～3.5</small></div><p>ASUS 舊用戶提升幅度遠高於 Deco、Tether 等他牌用戶</p></div>
+    <div class="u glass"><div class="k">UAT｜主力 IT 專家用戶</div><div class="v">66.7 → 88.3<small>+21.6</small></div><p>ASUS 主力的 IT 專家用戶評價最高</p></div>
+    <div class="u glass"><div class="k">UAT｜使用者怎麼說</div><q>進步非常多</q><q>出問題時首頁換色提醒，非常清楚</q><p>首頁「藍色色塊」獲建議作為代表視覺</p></div>
   </div>
 
   <div class="proj-head"><h3>7 個專案｜點縮圖直接操作原型</h3><span>開啟線上原型（新分頁）</span></div>
